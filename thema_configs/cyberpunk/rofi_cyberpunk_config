@@ -1,0 +1,153 @@
+configuration {
+display-drun: "";
+display-window: "Windows: ";
+drun-display-format: "{name}";
+modi: "window,run,drun";
+font: "TerminessNerdFont Bold 16";
+show-icons: false;
+}
+@theme "/dev/null"
+* {
+  red      : #de524a;
+  lred     : #ff7162;
+  green    : #22d87a;
+  lgreen   : #c9ee5e;
+  yellow   : #ecc747;
+  lyellow  : #edd682;
+  blue     : #2366c3;
+  lblue    : #7fb4ff;
+  magenta  : #9132e8;
+  lmagenta : #c17fff;
+  cyan     : #55e7f0;
+  lcyan    : #a7ecef;
+  white    : #e5e9e6;
+  black    : #130912;
+  bg: @black;
+  fg: @lgreen;
+  disabled : #5d5d5d;
+  background-color: transparent;
+  color: @lgreen;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+  }
+window {
+width: 90%;
+height: 90%;
+transparency: "real";
+background-color: #130912bb;
+}
+mainbox {
+location: center;
+anchor: center;
+margin: 80;
+border: 2;
+border-color: @lgreen;
+orientation: horizontal;
+children: [ "imagebox", "listbox" ];
+}
+imagebox {
+orientation: vertical;
+expand: false;
+width: 35%;
+children: [ "textbox-dummy1", "clock", "textbox-militech" ];
+}
+textbox-dummy1 {
+expand: false;
+margin: 15 0 5 0;
+}
+clock {
+expand: false;
+padding: 10;
+border: 2 0 2 0;
+border-color: @lgreen;
+orientation: horizontal;
+background-color: #c9ff5e33;
+children: [ "textbox-label", "textbox-number" ];
+}
+textbox-label {
+expand: true;
+content: "ENTRY TIME REMAINING";
+padding: 5 0 5 0;
+}
+textbox-number {
+expand: false;
+content: "N/A";
+border: 2;
+border-color: @lgreen;
+padding: 5 15 5 15;
+}
+textbox-militech {
+    expand: true;
+    margin: 80;
+    font: "JetBrainsMono Nerd Font 14";
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    content: "       .,c'       \n       .lx:       \n   .';;:ox:.      \n '::;'..cx:.      \n .,:;. .ck:       \n   .,:,'lx:.      \n     .:ood:.      \n   .,;;,cx:.      \n.;c:'.  :x:       \n'll:,. .:kc.      \n .',;:;;lxc.      \n     ..;odol;.    \n       .:xl,;c:,..\n        :xc. .:od;\n        :xc..;c:,.\n       .ckc.:c.   \n       .ckc..',.  \n       .cx:.  .,,.\n       .cx:     ..\n        ':.       \nLook, Mom... I'm here. Very top of Arasaka Tower.";
+}
+listbox {
+orientation: vertical;
+expand: false;
+width: 65%;
+children: [ "textbox-buffer", "inputbar-wrapper", "listview-wrapper" ];
+}
+textbox-buffer {
+expand: false;
+content: "BUFFER";
+margin: 15 0 5 10;
+}
+inputbar-wrapper {
+border: 2 0 2 0;
+border-color: @lgreen;
+background-color: #c9ff5e33;
+expand: false;
+children: [ "inputbar" ];
+}
+inputbar {
+border: 2;
+padding: 10;
+margin: 5 15 5 15;
+border-color: @lgreen;
+background-color: @bg;
+}
+listview-wrapper {
+children: [ "listview-label", "listview" ];
+}
+listview-label {
+expand: false;
+orientation: horizontal;
+margin: 10 10 0 10;
+padding: 4 4 4 15;
+border: 2 2 0 2;
+border-color: @lgreen;
+children: [ "textbox-listview-icon", "textbox-listview-label" ];
+}
+textbox-listview-icon {
+expand: false;
+content: "󱇯";
+font: "TerminessNerdFont Bold 24";
+margin: 0 8 0 0;
+}
+textbox-listview-label {
+expand: false;
+padding: 5;
+content: "PROGRAM TO BE EXECUTED";
+}
+listview {
+margin: 0 10 30 10;
+padding: 0;
+border: 2;
+border-color: @lgreen;
+}
+element {
+padding: 10 10 10 20;
+}
+element.normal {
+background-color: transparent;
+}
+element.selected {
+background-color: #c9ff5e33;
+}
+element-text.selected {
+text-color: @cyan;
+}

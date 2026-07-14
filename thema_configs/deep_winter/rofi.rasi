@@ -1,0 +1,152 @@
+/* Extra Utilities 2 configuration */
+configuration {
+display-drun: "";
+display-window: "Windows: ";
+drun-display-format: "{name}";
+modi: "window,run,drun";
+font: "TerminessNerdFont Bold 16";
+show-icons: false;
+}
+@theme "/dev/null"
+* {
+  red      : #2a4a8a;
+  lred     : #4a6aaa;
+  green    : #4a90d9;
+  lgreen   : #7EB8D4;
+  yellow   : #5a8fcc;
+  lyellow  : #A8D4E8;
+  blue     : #1a3a6a;
+  lblue    : #7fb4ff;
+  magenta  : #2a5a9a;
+  lmagenta : #6aaad4;
+  cyan     : #A8D4E8;
+  lcyan    : #C8DCE8;
+  white    : #C8DCE8;
+  black    : #0a0d14;
+  bg: @black;
+  fg: @lgreen;
+  disabled : #2a3a4a;
+  background-color: transparent;
+  color: @lgreen;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+  }
+window {
+width: 90%;
+height: 90%;
+transparency: "real";
+background-color: #0a0d14bb;
+}
+mainbox {
+location: center;
+anchor: center;
+margin: 80;
+border: 2;
+border-color: @lgreen;
+orientation: horizontal;
+children: [ "imagebox", "listbox" ];
+}
+imagebox {
+orientation: vertical;
+expand: false;
+width: 35%;
+children: [ "textbox-dummy1", "clock", "textbox-militech" ];
+}
+textbox-dummy1 {
+expand: false;
+margin: 15 0 5 0;
+}
+clock {
+expand: false;
+padding: 10;
+border: 2 0 2 0;
+border-color: @lgreen;
+orientation: horizontal;
+background-color: #7eb8d433;
+children: [ "textbox-label", "textbox-number" ];
+}
+textbox-label {
+expand: true;
+content: "ENTRY TIME REMAINING";
+padding: 5 0 5 0;
+}
+textbox-number {
+expand: false;
+content: "N/A";
+border: 2;
+border-color: @lgreen;
+padding: 5 15 5 15;
+}
+textbox-militech {
+    expand: true;
+    margin: 80;
+    font: "JetBrainsMono Nerd Font 14";
+    content: "        *        \n     *  *  *     \n  * * * * * * *  \n     *  *  *     \n  * *   *   * *  \n     *  *  *     \n  * * * * * * *  \n     *  *  *     \n        *        \n  D E E P  W I N T E R";
+}
+listbox {
+orientation: vertical;
+expand: false;
+width: 65%;
+children: [ "textbox-buffer", "inputbar-wrapper", "listview-wrapper" ];
+}
+textbox-buffer {
+expand: false;
+content: "BUFFER";
+margin: 15 0 5 10;
+}
+inputbar-wrapper {
+border: 2 0 2 0;
+border-color: @lgreen;
+background-color: #7eb8d433;
+expand: false;
+children: [ "inputbar" ];
+}
+inputbar {
+border: 2;
+padding: 10;
+margin: 5 15 5 15;
+border-color: @lgreen;
+background-color: @bg;
+}
+listview-wrapper {
+children: [ "listview-label", "listview" ];
+}
+listview-label {
+expand: false;
+orientation: horizontal;
+margin: 10 10 0 10;
+padding: 4 4 4 15;
+border: 2 2 0 2;
+border-color: @lgreen;
+children: [ "textbox-listview-icon", "textbox-listview-label" ];
+}
+textbox-listview-icon {
+expand: false;
+content: "󱇯";
+font: "TerminessNerdFont Bold 24";
+margin: 0 8 0 0;
+}
+textbox-listview-label {
+expand: false;
+padding: 5;
+content: "PROGRAM TO BE EXECUTED";
+}
+listview {
+margin: 0 10 30 10;
+padding: 0;
+border: 2;
+border-color: @lgreen;
+}
+element {
+padding: 10 10 10 20;
+}
+element.normal {
+background-color: transparent;
+}
+element.selected {
+background-color: #7eb8d433;
+}
+element-text.selected {
+text-color: @lcyan;
+}

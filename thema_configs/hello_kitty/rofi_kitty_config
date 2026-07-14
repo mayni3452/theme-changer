@@ -1,0 +1,145 @@
+/* Hello Kitty Pink Theme */
+configuration {
+display-drun: "";
+display-window: "Windows: ";
+drun-display-format: "{name}";
+modi: "window,run,drun";
+font: "TerminessNerdFont Bold 16";
+show-icons: false;
+}
+@theme "/dev/null"
+* {
+  pink     : #FF69B4;
+  lpink    : #FFB6C1;
+  dpink    : #C2185B;
+  rose     : #FF1493;
+  lrose    : #FFD6E7;
+  cream    : #FFF0F5;
+  dark     : #1a0010;
+  bg: @dark;
+  fg: @pink;
+  disabled : #5a2a3a;
+  background-color: transparent;
+  color: @pink;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+  }
+window {
+width: 90%;
+height: 90%;
+transparency: "real";
+background-color: #1a0010bb;
+}
+mainbox {
+location: center;
+anchor: center;
+margin: 80;
+border: 2;
+border-color: @pink;
+orientation: horizontal;
+children: [ "imagebox", "listbox" ];
+}
+imagebox {
+orientation: vertical;
+expand: false;
+width: 35%;
+children: [ "textbox-dummy1", "clock", "textbox-kitty" ];
+}
+textbox-dummy1 {
+expand: false;
+margin: 15 0 5 0;
+}
+clock {
+expand: false;
+padding: 10;
+border: 2 0 2 0;
+border-color: @pink;
+orientation: horizontal;
+background-color: #FF69B433;
+children: [ "textbox-label", "textbox-number" ];
+}
+textbox-label {
+expand: true;
+content: "ENTRY TIME REMAINING";
+padding: 5 0 5 0;
+}
+textbox-number {
+expand: false;
+content: "N/A";
+border: 2;
+border-color: @pink;
+padding: 5 15 5 15;
+}
+textbox-kitty {
+    expand: true;
+    margin: 80;
+    font: "JetBrainsMono Nerd Font 14";
+    content: "   /\\_____/\\\n  /  o   o  \\\n ( ==  ^  == )\n  )         (\n (           )\n ( (  )   (  ) )\n(__(__)___(__)__)\n\n  >  H E L L O  <\n  >  K I T T Y  <";
+}
+listbox {
+orientation: vertical;
+expand: false;
+width: 65%;
+children: [ "textbox-buffer", "inputbar-wrapper", "listview-wrapper" ];
+}
+textbox-buffer {
+expand: false;
+content: "BUFFER";
+margin: 15 0 5 10;
+}
+inputbar-wrapper {
+border: 2 0 2 0;
+border-color: @pink;
+background-color: #FF69B433;
+expand: false;
+children: [ "inputbar" ];
+}
+inputbar {
+border: 2;
+padding: 10;
+margin: 5 15 5 15;
+border-color: @pink;
+background-color: @bg;
+}
+listview-wrapper {
+children: [ "listview-label", "listview" ];
+}
+listview-label {
+expand: false;
+orientation: horizontal;
+margin: 10 10 0 10;
+padding: 4 4 4 15;
+border: 2 2 0 2;
+border-color: @pink;
+children: [ "textbox-listview-icon", "textbox-listview-label" ];
+}
+textbox-listview-icon {
+expand: false;
+content: "󱇯";
+font: "TerminessNerdFont Bold 24";
+margin: 0 8 0 0;
+}
+textbox-listview-label {
+expand: false;
+padding: 5;
+content: "PROGRAM TO BE EXECUTED";
+}
+listview {
+margin: 0 10 30 10;
+padding: 0;
+border: 2;
+border-color: @pink;
+}
+element {
+padding: 10 10 10 20;
+}
+element.normal {
+background-color: transparent;
+}
+element.selected {
+background-color: #FF69B433;
+}
+element-text.selected {
+text-color: @lpink;
+}

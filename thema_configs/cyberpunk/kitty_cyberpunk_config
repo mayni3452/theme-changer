@@ -1,0 +1,12 @@
+shell /usr/bin/fish
+
+font_family JetBrainsMono Nerd Font
+font_size 13
+
+cursor_shape block
+cursor #FFD700         
+cursor_text_color #000000  
+
+background #170000       
+background_opacity 0.9
+foreground #FFFF99       
