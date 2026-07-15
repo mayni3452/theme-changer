@@ -2,39 +2,39 @@
 
 case "$1" in
 	hellokitty) 
-		cp thema_configs/hello_kitty/hypr_kitty_config ~/.config/hypr/hyprland.conf
-		cp thema_configs/hello_kitty/waybar_kitty_config ~/.config/waybar/style.css
+		cp ~/thema_changer/thema_configs/hello_kitty/hypr_kitty_config ~/.config/hypr/hyprland.conf
+		cp ~/thema_changer/thema_configs/hello_kitty/waybar_kitty_config ~/.config/waybar/style.css
 		pkill waybar
 		waybar > /dev/null 2>&1 & disown
 		pkill swaybg
-		swaybg -i "/home/kyksel3452/thema_changer/wallpaper/hello-kitty-pc-kbha8a5w146z68g0.jpg" -m fill > /dev/null 2>&1 &disown
-		cp thema_configs/hello_kitty/kitty_kitty_config
+		swaybg -i "$HOME/thema_changer/wallpaper/hello-kitty-pc-kbha8a5w146z68g0.jpg" -m fill > /dev/null 2>&1 &disown
+		cp ~/thema_changer/thema_configs/hello_kitty/kitty_kitty_config ~/.config/kitty/kitty.conf
 		kill -SIGUSR1 $(pidof kitty)
-		cp thema_configs/hello_kitty/rofi_kitty_config ~/.config/rofi/config.rasi
+		cp ~/thema_changer/thema_configs/hello_kitty/rofi_kitty_config ~/.config/rofi/config.rasi
 		echo "nya"
 		;;
 	dwinter)
-		cp thema_configs/deep_winter/winter_hypr_conf ~/.config/hypr/hyprland.conf
-		cp thema_configs/deep_winter/winter_waybar_config ~/.config/waybar/style.css
+		cp ~/thema_changer/thema_configs/deep_winter/winter_hypr_conf ~/.config/hypr/hyprland.conf
+		cp ~/thema_changer/thema_configs/deep_winter/winter_waybar_config ~/.config/waybar/style.css
 		pkill waybar
 		waybar > /dev/null 2>&1 & disown
 		pkill swaybg
-		swaybg -i "/home/kyksel3452/thema_changer/wallpaper/488d064838dbb39f6186b56f02f5cae3.jpg" -m fill > /dev/null 2>&1 & disown
-		cp thema_configs/deep_winter/winter_kitty_conf ~/.config/kitty/kitty.conf
+		swaybg -i "$HOME/thema_changer/wallpaper/488d064838dbb39f6186b56f02f5cae3.jpg" -m fill > /dev/null 2>&1 & disown
+		cp ~/thema_changer/thema_configs/deep_winter/winter_kitty_conf ~/.config/kitty/kitty.conf
 		kill -SIGUSR1 $(pidof kitty)
-		cp thema_configs/deep_winter/winter_rofi_config ~/.config/rofi/config.rasi
+		cp ~/thema_changer/thema_configs/deep_winter/winter_rofi_config ~/.config/rofi/config.rasi
 		echo "56"
 		;;
 	cyberpunk)
-		cp thema_configs/cyberpunk/hypr_cyberpunk_config ~/.config/hypr/hyprland.conf
-		cp thema_configs/cyberpunk/waybar_cyberpunk_config ~/.config/waybar/style.css
+		cp ~/thema_changer/thema_configs/cyberpunk/hypr_cyberpunk_config ~/.config/hypr/hyprland.conf
+		cp ~/thema_changer/thema_configs/cyberpunk/waybar_cyberpunk_config ~/.config/waybar/style.css
 		pkill waybar
 		waybar > /dev/null 2>&1 & disown
 		pkill swaybg
-		swaybg -i "/home/kyksel3452/thema_changer/wallpaper/cyberpunk_wallpaper.jpg" -m fill > /dev/null 2>&1 & disown
-		cp thema_configs/cyberpunk/kitty_cyberpunk_config ~/.config/kitty/kitty.conf
+		swaybg -i "$HOME/thema_changer/wallpaper/cyberpunk_wallpaper.jpg" -m fill > /dev/null 2>&1 & disown
+		cp ~/thema_changer/thema_configs/cyberpunk/kitty_cyberpunk_config ~/.config/kitty/kitty.conf
 		kill -SIGUSR1 $(pidof kitty)
-		cp thema_configs/cyberpunk/rofi_cyberpunk_config ~/.config/rofi/config.rasi
+		cp ~/thema_changer/thema_configs/cyberpunk/rofi_cyberpunk_config ~/.config/rofi/config.rasi
 		echo "Look, Mom... I'm here. Very top of Arasaka Tower."
 		;;
 	*)
