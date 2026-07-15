@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cp ~/thema_changer/thema_script ~/bin/thema
-chmod +x ~/bin/thema
+cp ~/theme_changer/theme_script ~/bin/theme
+chmod +x ~/bin/theme
 
