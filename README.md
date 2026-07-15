@@ -16,16 +16,16 @@
 
 | Тема | Команда |
 |------|---------|
-| cyberpunk | `thema cyberpunk` |
-| hellokitty | `thema kitty` |
-| dwinter | `thema deep-winter` |
+| cyberpunk | `theme cyberpunk` |
+| hellokitty | `theme hellokitty` |
+| dwinter | `theme dwinter` |
 
 ## Установка
 
 1. Клонируй репозиторий:
    ```bash
    git clone https://github.com/mayni3452/theme-changer.git
-   cd репо
+   cd ~/theme_changer
    ```
 
 2. Запусти установочный скрипт:
@@ -33,20 +33,20 @@
    ./creator.sh
    ```
 
-   Скрипт сам скопирует переключатель тем в `bin`, после чего команда `thema` станет доступна глобально.
+   Скрипт сам скопирует переключатель тем в `bin`, после чего команда `theme` станет доступна глобально.
 
 ## Использование
 
 После установки просто вызывай:
 
 ```bash
-thema <название_темы>
+theme <название_темы>
 ```
 
 Например:
 
 ```bash
-thema cyberpunk
+theme cyberpunk
 ```
 
 ## Требования
